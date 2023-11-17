@@ -6,7 +6,7 @@ jobs:    # Jobs that specify tasks to run
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "aaaaa"
+      - run: echo "aaaa"
       - run:
           name: say hello
           command: echo "hello"
