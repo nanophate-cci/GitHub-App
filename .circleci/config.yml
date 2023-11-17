@@ -1,0 +1,18 @@
+version: 2.1   # CircleCI version
+
+jobs:    # Jobs that specify tasks to run
+  build:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "aaaaa"
+      - run:
+          name: say hello
+          command: echo "hello"
+
+
+workflows:   # Pipelines that orchestrate job runs
+  some-build:
+    jobs:
+      - build
